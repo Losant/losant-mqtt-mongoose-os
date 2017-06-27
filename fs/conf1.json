@@ -1,0 +1,23 @@
+{
+    "wifi": {
+        "sta": {
+            "enable": true,
+            "ssid": "WIFI_SSID",
+            "pass": "WIFI_PASSWORD"
+        }
+    },
+    "device": {
+        "id": "LOSANT_CLIENT_ID"
+    },
+    "debug": {
+        "stdout_topic": "",
+        "stderr_topic": ""
+    },
+    "mqtt": {
+        "enable": true,
+        "client_id": "LOSANT_CLIENT_ID",
+        "user": "LOSANT_ACCESS_KEY",
+        "pass": "LOSANT_ACCESS_SECRET",
+        "ssl_ca_cert": "ca.pem"
+    }
+}
