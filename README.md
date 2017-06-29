@@ -12,13 +12,13 @@ Mongoose OS has support for [run-time multi-layer configuration](https://mongoos
 
 You must replace the following values:
 
-- LOSANT_CLIENT_ID
+- LOSANT_DEVICE_ID
 - LOSANT_ACCESS_KEY
 - LOSANT_ACCESS_SECRET 
 - WIFI_SSID
 - WIFI_PASSWORD
 
-You obtain the `LOSANT_CLIENT_ID`, `LOSANT_ACCESS_KEY`, and `LOSANT_ACCESS_SECRET` values from [Losant](www.losant.com). 
+You obtain the `LOSANT_DEVICE_ID`, `LOSANT_ACCESS_KEY`, and `LOSANT_ACCESS_SECRET` values from [Losant](www.losant.com). 
 
 ```
 {
@@ -30,7 +30,7 @@ You obtain the `LOSANT_CLIENT_ID`, `LOSANT_ACCESS_KEY`, and `LOSANT_ACCESS_SECRE
         }
     },
     "device": {
-        "id": "LOSANT_CLIENT_ID"
+        "id": "LOSANT_DEVICE_ID"
     },
     "debug": {
         "stdout_topic": "",
@@ -38,7 +38,7 @@ You obtain the `LOSANT_CLIENT_ID`, `LOSANT_ACCESS_KEY`, and `LOSANT_ACCESS_SECRE
     },
     "mqtt": {
         "enable": true,
-        "client_id": "LOSANT_CLIENT_ID",
+        "client_id": "LOSANT_DEVICE_ID",
         "user": "LOSANT_ACCESS_KEY",
         "pass": "LOSANT_ACCESS_SECRET",
         "ssl_ca_cert": "ca.pem"
