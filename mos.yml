@@ -1,8 +1,14 @@
-author: mongoose-os
-description: A default Mongoose OS firmware
+author: losant
+description: An example Losant & Mongoose OS app
 # arch: PLATFORM
 version: 1.0
-skeleton_version: 2017-05-18
+manifest_version: 2017-05-18
+
+platforms: [ cc3200, esp32, esp8266 ]
+
+libs_version: ${mos.version}
+modules_version: ${mos.version}
+mongoose_os_version: ${mos.version}
 
 tags:
   - js
@@ -16,9 +22,15 @@ filesystem:
 
 config_schema:
   - ["mqtt.server", "broker.losant.com:8883"]
+  - ["mqtt.enable", true]
+  - ["mqtt.ssl_ca_cert", "ca.pem"]
 
 libs:
     # common mgos libs
+  - origin: https://github.com/mongoose-os-libs/ca-bundle
+  - origin: https://github.com/mongoose-os-libs/http-server
+  - origin: https://github.com/mongoose-os-libs/ota-http-server
+  - origin: https://github.com/mongoose-os-libs/pwm
   - origin: https://github.com/mongoose-os-libs/rpc-loopback
   - origin: https://github.com/mongoose-os-libs/rpc-mqtt
   - origin: https://github.com/mongoose-os-libs/rpc-service-config
@@ -26,9 +38,8 @@ libs:
   - origin: https://github.com/mongoose-os-libs/rpc-service-gpio
   - origin: https://github.com/mongoose-os-libs/rpc-service-i2c
   - origin: https://github.com/mongoose-os-libs/rpc-service-ota
+  - origin: https://github.com/mongoose-os-libs/rpc-service-wifi
   - origin: https://github.com/mongoose-os-libs/rpc-uart
   - origin: https://github.com/mongoose-os-libs/spi
   - origin: https://github.com/mongoose-os-libs/vfs-dev-spi-flash
-
-    # libs necessary for the current app
-  - origin: https://github.com/mongoose-os-libs/mjs
+  - origin: https://github.com/mongoose-os-libs/wifi
