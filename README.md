@@ -39,7 +39,6 @@ You must replace the following values:
 5. Configure MQTT connection to Losant:
 ```
 mos config-set device.id=LOSANT_DEVICE_ID \
-mqtt.enable=true \
 mqtt.client_id=LOSANT_DEVICE_ID \
 mqtt.user=LOSANT_ACCESS_KEY \
 mqtt.pass=LOSANT_ACCESS_SECRET
