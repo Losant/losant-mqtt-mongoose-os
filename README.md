@@ -16,7 +16,19 @@ Before beginning, you must have the `mos` tool installed. For more info, see the
 $ git clone https://github.com/Losant/losant-mqtt-mongoose-os.git
 ```
 
-2. Configure WiFi:
+2. Building the firmware: (esp8266 or esp32)
+
+```
+$ mos build --arch esp8266 
+```
+
+3. To flash the device: (esp8266 or esp32)
+
+```
+$ mos flash 
+```
+
+4. Configure WiFi:
 ```
 mos wifi WIFI_SSID WIFI_PASSWORD 
 ```
@@ -24,7 +36,7 @@ You must replace the following values:
 - WIFI_SSID
 - WIFI_PASSWORD
 
-3. Configure MQTT connection to Losant:
+5. Configure MQTT connection to Losant:
 ```
 mos config-set device.id=LOSANT_DEVICE_ID \
 mqtt.enable=true \
@@ -34,18 +46,6 @@ mqtt.pass=LOSANT_ACCESS_SECRET
 ```  
 
 You obtain the `LOSANT_DEVICE_ID`, `LOSANT_ACCESS_KEY`, and `LOSANT_ACCESS_SECRET` values from [Losant](www.losant.com). 
-
-4. Building the firmware: (esp8266 or esp32)
-
-```
-$ mos build --arch esp8266 
-```
-
-5. To flash the device: (esp8266 or esp32)
-
-```
-$ mos flash esp8266 
-```
 
 6. To stream logs to the terminal: 
 
